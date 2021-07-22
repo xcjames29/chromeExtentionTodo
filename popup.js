@@ -37,6 +37,7 @@ addButton.addEventListener("click", () => {
         },[]);
         localStorage.setItem("todo", JSON.stringify(listDeleted));
         todoListFromStorage = listDeleted;
+        load();
       })
     })
     localStorage.setItem("todo", JSON.stringify(newList));
