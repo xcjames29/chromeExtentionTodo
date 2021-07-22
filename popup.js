@@ -29,9 +29,14 @@ addButton.addEventListener("click", () => {
       div.append(deleteButton);
       todoContainer.append(div);
       deleteButton.addEventListener("click",()=>{
-        let listDeleted = todoListFromStorage.map((e,listIndex)=>{if(index===listIndex) return e});
+        let listDeleted = todoListFromStorage.reduce((acc,val,listIndex)=>{
+          if(listIndex!==index){
+            acc.push(val)
+          }
+          return acc
+        },[]);
         localStorage.setItem("todo", JSON.stringify(listDeleted));
-        load();
+        todoListFromStorage = listDeleted;
       })
     })
     localStorage.setItem("todo", JSON.stringify(newList));
@@ -63,6 +68,7 @@ function load(){
           if(listIndex!==index){
             acc.push(val)
           }
+          return acc
         },[]);
         localStorage.setItem("todo", JSON.stringify(listDeleted));
         todoListFromStorage = listDeleted;
