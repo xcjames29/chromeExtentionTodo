@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    color: rgb(98, 144, 144);
+}
+
+.header{
+    padding: 20px 30px;
+    border-bottom: 2px solid blue;
+    width: 100%;
+}
+
+.todoContainer{
+    width: 80%;
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    gap: 5px;
+}
+
+.addContainer{
+    width: 100%;
+    padding: 50px 30px;
+    background-color: rgb(194, 194, 194);
+    border: 1px solid gray;
+    display: flex;
+}
+
+.deleteButton{
+    height: 100%;
+    width: fit-content;
+    font-size: 24px;
+}
+
+
+.card{
+    width: 60%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border: 1px solid gray;
+}
+
+#todoInput{
+    font-size: 24px;
+}
+
+.addBtn{
+    padding: 5px 20px;
+}
